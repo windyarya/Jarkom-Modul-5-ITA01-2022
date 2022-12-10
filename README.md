@@ -31,3 +31,7 @@ Setelah kami melakukan pembagian tersebut, berikut nya kami menghitung berapa ju
 | A4    |           2 |       2 | 10.40.7.144 | /30     | 255.255.255.252 | 10.40.7.145-10.40.7.146 | 10.40.7.147 |
 | A5    |           2 |       2 | 10.40.7.148 | /30     | 255.255.255.252 | 10.40.7.149-10.40.7.150 | 10.40.7.151 |
 | Total |        1231 |         |             | /21     |                 |                         |             |
+
+### Melakukan konfigurasi
+pada hal ini kami diminta untuk melakukan Routing agar setiap perangkat pada jaringan tersebut terhubung.<br>
+![image](images/routing.png)

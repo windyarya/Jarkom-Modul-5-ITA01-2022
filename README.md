@@ -38,3 +38,6 @@ pada hal ini kami diminta untuk melakukan Routing agar setiap perangkat pada jar
 
 1. Routing pada `router westalis`.<br>
 ![image](images/routingwest.png)
+
+2. Routing pada `ostania`.<br>
+![image](images/routingost.png)

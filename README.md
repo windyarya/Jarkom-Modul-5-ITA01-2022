@@ -213,3 +213,9 @@ iptables -t nat -A POSTROUTING -s 10.40.0.0/21 -o eth0 -j SNAT --to-source "$ipE
 Kami melakukan testing ping pada Strix.
 
 ![image](images/1.png)
+
+## Kendala
+
+Kami masih kesulitan dalam melakukan konfigurasi dari soal-soal selanjutnya karena masih mempelajari dan belum begitu paham dengan Firewall pada GNS3.
+
+Terima kasih :v:

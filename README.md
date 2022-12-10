@@ -35,3 +35,6 @@ Setelah kami melakukan pembagian tersebut, berikut nya kami menghitung berapa ju
 ### Melakukan konfigurasi
 pada hal ini kami diminta untuk melakukan Routing agar setiap perangkat pada jaringan tersebut terhubung.<br>
 ![image](images/routing.png)
+
+1. Routing pada `router westalis`.<br>
+![image](images/routingwest.png)

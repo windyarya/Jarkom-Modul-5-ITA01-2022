@@ -8,6 +8,20 @@ Repository Laporan Resmi Praktikum Jaringan Komputer Modul 5 Kelompok ITA01 Tahu
 
 Kontribusi untuk modul ini sama rata (33.33% per orang).
 
+# Daftar Isi
+
+- [Daftar Isi](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#daftar-isi)
+- [Konfigurasi](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#konfigurasi)
+	- [Konfigurasi A](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#konfigurasi-a)
+	- [Konfigurasi B](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#konfigurasi-b)
+	- [Konfigurasi C](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#konfigurasi-c)
+	- [Konfigurasi d](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#konfigurasi-d)
+- [Soal](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#soal)
+	- [Soal 1](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#soal-1)
+- [Kendala](https://github.com/windyarya/Jarkom-Modul-5-ITA01-2022#kendala)
+
+# Konfigurasi
+
 ## Konfigurasi A
 
 ### Gambar Topologi
@@ -37,8 +51,117 @@ Setelah kami melakukan pembagian tersebut, berikut nya kami menghitung berapa ju
 
 ## Konfigurasi C
 
-### Melakukan konfigurasi
-pada hal ini kami diminta untuk melakukan Routing agar setiap perangkat pada jaringan tersebut terhubung.<br>
+### Konfigurasi IP
+
+- Konfigurasi IP pada router Strix
+
+```bash
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+	address 10.40.7.145
+	netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+	address 10.40.7.149
+	netmask 255.255.255.252
+```
+
+- Konfigurasi IP pada router Westalis
+
+```bash
+auto eth0
+iface eth0 inet static
+	address 10.40.7.146
+	netmask 255.255.255.252
+	gateway 10.40.7.145
+
+auto eth1
+iface eth1 inet static
+	address 10.40.7.1
+	netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+	address 10.40.7.129
+	netmask 255.255.255.248
+
+auto eth3
+iface eth3 inet static
+	address 10.40.0.1
+	netmask 255.255.252.0
+```
+
+- Konfigurasi IP pada router Ostania
+
+```bash
+auto eth0
+iface eth0 inet static
+	address 10.40.7.150
+	netmask 255.255.255.252
+	gateway 10.40.7.149
+
+auto eth1
+iface eth1 inet static
+	address 10.40.6.1
+	netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+	address 10.40.7.137
+	netmask 255.255.255.248
+
+auto eth3
+iface eth3 inet static
+	address 10.40.4.1
+	netmask 255.255.254.0
+```
+
+- Konfigurasi IP Eden
+
+```bash
+auto eth0
+iface eth0 inet static
+	address 10.40.7.130
+	netmask 255.255.255.248
+	gateway 10.40.7.129
+```
+- Konfigurasi IP WISE
+
+```bash
+auto eth0
+iface eth0 inet static
+	address 10.40.7.131
+	netmask 255.255.255.0
+	gateway 10.40.7.129
+```
+
+- Konfigurasi IP SSS
+
+```bash
+auto eth0
+iface eth0 inet static
+	address 10.40.7.139
+	netmask 255.255.255.248
+	gateway 10.40.7.137
+```
+
+- Konfigurasi IP SSS
+
+```bash
+auto eth0
+iface eth0 inet static
+	address 10.40.7.138
+	netmask 255.255.255.248
+	gateway 10.40.7.137
+```
+
+### Konfigurasi Routing
+
+Pada hal ini kami diminta untuk melakukan Routing agar setiap perangkat pada jaringan tersebut terhubung.<br>
 ![image](images/routing.png)
 
 1. Routing pada `router westalis`.<br>
@@ -49,7 +172,7 @@ pada hal ini kami diminta untuk melakukan Routing agar setiap perangkat pada jar
 
 ## Konfigurasi D
 
-### Soal
+### Instruksi
 
 Tugas berikutnya adalah memberikan ip pada subnet Forger, Desmond, Blackbell, dan Briar secara dinamis menggunakan bantuan DHCP server. Kemudian kalian ingat bahwa kalian harus setting DHCP Relay pada router yang menghubungkannya.
 
@@ -193,9 +316,11 @@ Kami melakukan testing ping pada semua client yang ada.
 
 ![image](images/d4.png)
 
+# Soal
+
 ## Soal 1
 
-### Soal
+### Soal 1
 
 Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi Strix menggunakan iptables, tetapi Loid tidak ingin menggunakan MASQUERADE.
 
